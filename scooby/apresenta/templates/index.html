@@ -1,0 +1,132 @@
+{% load static %}
+{% load widget_tweaks %}
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/cssSoby.css">
+
+	<meta charset="utf-8"/>
+	 <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css"
+    rel="stylesheet" type="text/css">
+    <link href="http://pingendo.github.io/pingendo-bootstrap/themes/default/bootstrap.css"
+    rel="stylesheet" type="text/css">
+    <link href="{% static 'css/cssSoby.css' %}"
+    rel="stylesheet" type="text/css">
+	<title>Scooby</title>
+</head>
+<boby>
+<div class="navbar navbar-default navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><span class="title">Scooby</span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active">
+              <a href="#">Marcas</a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-sign-in"></i> Acesso</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+<div class="container-fluid text-center fundo-verde cor-branca">
+	<h1>Casa de Ração Scooby</h1>
+	<p>A melhor casa de ração da região de Franco</p>
+</div>
+<div class="section">
+<div class="text-center">
+<h2>Serviços</h2>
+<br/>
+</div>
+
+<div class="container">
+	<div class="row">
+	<div class="col-md-4">
+			<img class="img-responsive" src="{% static 'img/banho.png'%}">
+		</div>
+		<div class="col-md-8" id="btosa">
+			<h1>Banho & Tosa</h1>
+			<p>Contamos com uma equipe de profissionais qualificados para deixar o seu bichinho de estimação mais limpo, bonito e saudáve</p>
+			<p class="neg">Banho - Tosa Higiênica - Tosa Estética - Hidratação - Limpeza das Orelhas - Corte de Unhas</p>
+		</div>
+	</div>
+</div>
+</div>
+<div class="section">
+<div class="container">
+	<div class="row" id="tdog">
+		<div class="col-md-7">
+			<h1>Taxi Dog</h1>
+			<p>Buscamos o seu bichinho de estimação na sua casa. O transporte é realizado em caixas de transportes individualizadas e higienizadas. A ração do seu melhor amigo acabou? É só ligar que entregamos na sua casa!</p>
+			<p class="neg">Taxi Dog - Tele Entrega</p>
+		</div>
+		<div class="col-md-5">
+			<img class="img-responsive" src="{% static 'img/transp.png' %}">
+		</div>
+	</div>
+</div>
+</div>
+<div class="section">
+<div class="text-center">
+<h2>Contato</h2>
+<br/>
+</div>
+<div class="section" id="contato">
+<div class="container">
+	<div class="row">
+		<div class="col-md-6">
+			<h3>Endereço : </h3>
+			<p>AV . Arcos Iris N° 1183 - Lagoa Azul , Franco da Rocha - SP</p>
+			<h3>Fone :</h3>
+			<p>(11) 2867-2665</p>
+			<h3>E-mail :</h3>
+			<p></p>
+		</div>
+		<div class="col-md-6">
+			{% for fields in form %}
+			<form class="form-group" method="post">
+			{% csrf_token %}
+			{{fields.label_tag}}
+			{{fields|add_class:"form-control"}}
+			{% if fields.errors %}
+				<div class="alert">
+					{{fields.errors}}
+				</div>
+			{% endif %}
+			{% endfor%}
+			<br/>
+			<input class="btn btn-primary btn-block btn-lg"/ type="submit">
+			</form>
+		</div>
+	</div>
+</div>
+</div>
+</div>
+<footer class="container-fluid fundo-verde ">
+<div class="container">
+	<div class="row">
+		<div class="col-md-4 cor-branca">
+			<h4>&copy Scooby Ração</h4>
+		</div>
+		<div class="col-md-4"></div>
+		<div class="col-md-4 cor-branca ">
+			<h6><a href="">Desenvolvedor : Diego Delmiro</a></h6>
+		</div>
+	</div>
+	</div>
+</footer>
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</body>
+</html>
