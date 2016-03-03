@@ -3,7 +3,7 @@ from django.core.mail import send_mail
 from django.conf import settings
 
 class CadastroForm(forms.Form):
-    nome  = forms.CharField(label="Nome",max_length='100',widget=forms.TextInput(attrs={'placeholder': 'Nome completo'}))
+    nome  = forms.CharField(label="Nome",help_text="Email2 ex : email@email.com",max_length='100',widget=forms.TextInput(attrs={'placeholder': 'Nome completo'}))
     email = forms.EmailField(label="Email",widget=forms.TextInput(attrs={'placeholder': 'ex email@Email.com'}))
     msg = forms.CharField(label="Mensagem",widget=forms.Textarea(attrs={'placeholder': 'Mensagem de 255 caracteres '}))
 

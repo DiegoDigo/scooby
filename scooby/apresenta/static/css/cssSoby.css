@@ -49,17 +49,11 @@
 	color:black;
 	text-decoration: none;
 }
-#tdog  h1{
+
+#lin  h1{
 	font-family: 'Germania One', cursive;
 }
-#btosa h1{
-	font-family: 'Germania One', cursive;
-}
-#btosa p{
-	font-size: 20px;
-	font-family: 'Buenard', serif;
-}
-#tdog p{
+#lin p{
 	font-size: 20px;
 	font-family: 'Buenard', serif;
 }
@@ -80,10 +74,8 @@
 		font-family: 'Francois One', sans-serif;
 
 	}
-	#btosa p{
-		font-size: 18px;
-	}
-	#tdog p{
+
+	#lin p{
 		font-size: 18px;
 	}
 	#contato h3{

@@ -1,7 +1,11 @@
 from django.shortcuts import render
 from .forms import CadastroForm
 
-# Create your views here.
+
+def marca(request):
+    return render(request,'marcas.html',{})
+
+
 def index(request):
     if request.method == "POST":
         form = CadastroForm(request.POST)

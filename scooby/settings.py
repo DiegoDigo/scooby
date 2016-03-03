@@ -41,6 +41,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'scooby.apresenta',
     'scooby.conta',
+    'scooby.principal',
     'widget_tweaks',
 
 )
@@ -115,8 +116,8 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 #auth
-LOGIN_URL = 'account:login'
-LOGIN_REDIRECT_URL = 'apresenta:home'
+LOGIN_URL = 'conta:login'
+LOGIN_REDIRECT_URL = 'princ:home'
 #LOGOUT_URL = 'acounts:logout'
 
 #Email
